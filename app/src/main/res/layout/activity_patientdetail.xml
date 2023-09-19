@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientdetailActivity"
+    android:windowSoftInputMode="adjustResize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/PatientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="#30999999"
+            android:hint="Patient Name"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/PatientAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#30999999"
+            android:gravity="center"
+            android:hint="Patient Age"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/PatientGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="#30999999"
+            android:hint="Patient Gender"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnsave"
+            android:text="Save"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

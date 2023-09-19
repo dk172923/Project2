@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="default_web_client_id">444097798977-uctkvaqub1803h9catbanveigfg9ga6m.apps.googleusercontent.com</string>
+    <string name="lessthan5mm"><![CDATA[<= 5 mm]]></string>
+    <string name="greaterthan8mm"><![CDATA[>= 8 mm]]></string>
+    <string name="tooth_mobile_in_axial_direction">Tooth mobile in axial direction</string>
+    <string name="_6to7mm">6 - 7 mm</string>
+    <string name="circumferential_bone_loss_to_the_apex">Circumferential bone loss to the apex</string>
+    <string name="greatethan1"><![CDATA[> 1]]></string>
+    <string name="_0_5_1">0.5 - 1</string>
+    <string name="lessthanpoint5"><![CDATA[< 0.5]]></string>
+
+</resources>

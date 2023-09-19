@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DiagnosisActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Tooth Level Assessment"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/inputtext"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="52dp"
+                android:text="Input: "
+                android:textSize="18sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/lhs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputtext"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Percentage of Bone Loss = "
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/num"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@+id/lhs"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Radigraph bone lose in mm"
+                android:padding="8dp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/num"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="110dp"
+                android:background="@drawable/divider_line" />
+
+
+            <EditText
+                android:id="@+id/den"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@+id/divider"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="0dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Total root length in mm"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lhs"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="60dp"
+                android:layout_toEndOf="@+id/den"
+                android:text="X" />
+
+            <TextView
+                android:id="@+id/V100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lhs"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="57dp"
+                android:layout_toEndOf="@id/textView"
+                android:text="100"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/calbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/V100"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                android:text="Calculate" />
+
+            <TextView
+                android:id="@+id/bltext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calbtn"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="% of Bone Loss: " />
+
+            <EditText
+                android:id="@+id/boneloseval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calbtn"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/bltext"
+                android:background="@android:color/transparent"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Bone Loss Value"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/percentsign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calbtn"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/boneloseval"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="%" />
+
+
+            <TextView
+                android:id="@+id/textofcalci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/percentsign"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:text="  BL/Age Calculator: " />
+
+            <EditText
+                android:id="@+id/editcalcivalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/percentsign"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/textofcalci"
+                android:background="@android:color/transparent"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="boneloss/age"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:id="@+id/listValueContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editcalcivalue"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <!-- Option 1 -->
+                <CheckBox
+                    android:id="@+id/checkbox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:editable="false"
+                    android:checked="false"
+                    android:drawableStart="@drawable/checkbox_unchecked"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:text="@string/lessthanpoint5" />
+
+                <!-- Option 2 -->
+                <CheckBox
+                    android:id="@+id/checkbox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableStart="@drawable/checkbox_unchecked"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:editable="false"
+                    android:text="@string/_0_5_1" />
+
+                <!-- Option 3 -->
+                <CheckBox
+                    android:id="@+id/checkbox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableStart="@drawable/checkbox_unchecked"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:editable="false"
+                    android:text="@string/greatethan1" />
+
+                <!-- Option 4 -->
+                <CheckBox
+                    android:id="@+id/checkbox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableStart="@drawable/checkbox_unchecked"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:editable="false"
+                    android:text="@string/circumferential_bone_loss_to_the_apex" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-------------------------------"
+                android:id="@+id/dashlines"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:letterSpacing="0.5"
+                android:layout_below="@id/listValueContainer"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pocket depth"
+                android:id="@+id/pocketdepth"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/dashlines"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/pocketdepth"
+                android:layout_marginTop="20dp"
+                android:id="@+id/radiolist"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Option 1 -->
+                    <RadioButton
+                        android:id="@+id/option1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lessthan5mm"/>
+
+                    <!-- Option 2 -->
+                    <RadioButton
+                        android:id="@+id/option2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_6to7mm"/>
+
+                    <!-- Option 3 -->
+                    <RadioButton
+                        android:id="@+id/option3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/greaterthan8mm"/>
+
+                    <!-- Option 4 -->
+                    <RadioButton
+                        android:id="@+id/option4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tooth_mobile_in_axial_direction"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_marginTop="20dp"
+                android:id="@+id/nextbtnnsave"
+                android:layout_below="@+id/radiolist"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>
